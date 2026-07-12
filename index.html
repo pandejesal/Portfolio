@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesal Pande — Portfolio</title>
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CUSTOM CURSOR -->
+    <div id="custom-cursor"></div>
+    <div id="cursor-dot"></div>
+
+    <!-- ROBOTIC KINEMATICS CANVAS BACKGROUND -->
+    <div id="canvas-container">
+        <canvas id="robotic-canvas"></canvas>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#" class="logo magnetic">JP / 26</a>
+        <ul class="nav-links">
+            <li><a href="#work" class="magnetic">Work</a></li>
+            <li><a href="mailto:pandejesal@gmail.com" class="magnetic">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <header class="hero">
+            <div class="status-badge">
+                <span class="dot"></span> Available for Web Dev & Robotics Projects
+            </div>
+            <h1>Jesal Pande.<br><span>Digital Designer & Engineer.</span></h1>
+            <p>I architect performance-driven mobile applications, designs, and program imitation learning systems on multi-axis robotic hardware.</p>
+        </header>
+
+        <!-- BENTO GRID -->
+        <div class="grid" id="work">
+            
+            <!-- CASE STUDY: ROBOTIC ARM -->
+            <div class="card col-2 tilt-card">
+                <div>
+                    <span class="card-tag">[01 / Robotic Systems]</span>
+                    <h2>Master-Slave Robotic Arm with Imitation Learning</h2>
+                    <h3>Custom Hardware & Imitation Training</h3>
+                    <p>Designed and built a precise hardware synchronization system allowing an operator to naturally teach and program complex trajectories to a remote slave mechanism.</p>
+                    <ul>
+                        <li>Operates on <strong>ST3215 serial bus servo motors</strong> and custom controller configurations for absolute positional tracking.</li>
+                        <li>Configured control structures in <strong>Python</strong> utilizing Hugging Face's <strong>LeRobot</strong> machine learning framework.</li>
+                        <li>Successfully demonstrated robust "pick-and-place" operations using imitation learning from physical human guidance.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- WORK EXPERIENCES: GLASSDOORS STUDIO -->
+            <div class="card tilt-card">
+                <div>
+                    <span class="card-tag">[02 / Venture]</span>
+                    <h2>GlassDoors Studio</h2>
+                    <h3>Co-Founder</h3>
+                    <p style="margin-bottom: 20px;">A creative studio delivering native mobile applications, production-ready web deployments, and fluid UI/UX wireframes.</p>
+                    <p>We work directly at the interface of custom visual interfaces and cross-platform mobile frameworks.</p>
+                </div>
+            </div>
+
+            <!-- SKILLS & ECOSYSTEMS -->
+            <div class="card tilt-card">
+                <div>
+                    <span class="card-tag">[03 / Stack]</span>
+                    <h2>Technical Expertise</h2>
+                    <div class="skills-list">
+                        <span class="skill-badge magnetic">Python</span>
+                        <span class="skill-badge magnetic">LeRobot</span>
+                        <span class="skill-badge magnetic">SOLIDWORKS</span>
+                        <span class="skill-badge magnetic">Blender</span>
+                        <span class="skill-badge magnetic">ST3215 Servos</span>
+                        <span class="skill-badge magnetic">UI/UX</span>
+                        <span class="skill-badge magnetic">Web Dev</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACADEMIC BACKGROUND -->
+            <div class="card col-2 tilt-card">
+                <div>
+                    <span class="card-tag">[04 / Education]</span>
+                    <h2>Education Timeline</h2>
+                    <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 20px;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; font-weight: 600;">
+                                <span class="text-glow-hover">12th Pass — CN English Medium School (CNEM)</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem;">2026</span>
+                            </div>
+                            <p style="font-size: 0.9rem; margin-top: 5px;">Primary academic focus located in Ahmedabad, Gujarat, India.</p>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; font-weight: 600;">
+                                <span class="text-glow-hover">Resident Robotics Program — My Equation</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem;">2026</span>
+                            </div>
+                            <p style="font-size: 0.9rem; margin-top: 5px;">Hands-on intensive development surrounding hardware schematics, circuits, and kinematics controllers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CERTIFICATIONS -->
+            <div class="card col-3 tilt-card">
+                <div>
+                    <span class="card-tag">[05 / Certifications]</span>
+                    <h2>Verified Qualifications</h2>
+                    <div class="certs-container" style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                        <div class="cert-item text-glow-hover">
+                            <h4>Introduction to Engineering Mechanics</h4>
+                            <span>Georgia Institute of Technology (Coursera)</span>
+                        </div>
+                        <div class="cert-item text-glow-hover">
+                            <h4>SOLIDWORKS Foundations</h4>
+                            <span>Dassault Systèmes</span>
+                        </div>
+                        <div class="cert-item text-glow-hover">
+                            <h4>Generative AI Mastermind</h4>
+                            <span>Outskill</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTACT SEC -->
+            <div class="card col-3 contact-box tilt-card">
+                <div>
+                    <span class="card-tag">[06 / Connectivity]</span>
+                    <h2>Let's build together.</h2>
+                    <p>I am looking for challenging engineering internships, collaborative web projects, or custom UI layouts.</p>
+                    <a href="mailto:pandejesal@gmail.com" class="contact-link magnetic">pandejesal@gmail.com</a>
+                    <div style="margin-top: 20px; font-size: 0.9rem; color: var(--text-muted);">
+                        <span>Ahmedabad, India</span> | <span>+91 9106515036</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Jesal Pande. Designed & Engineered with customized Kinematic systems.</p>
+        </footer>
+    </main>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
