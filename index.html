@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesal Pande — Portfolio</title>
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CUSTOM CURSOR -->
+    <div id="custom-cursor"></div>
+    <div id="cursor-dot"></div>
+
+    <!-- ROBOTIC KINEMATICS CANVAS BACKGROUND -->
+    <div id="canvas-container">
+        <canvas id="robotic-canvas"></canvas>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#" class="logo magnetic">JP / 26</a>
+        <ul class="nav-links">
+            <li><a href="#work" class="magnetic nav-item active">Work</a></li>
+            <li><a href="#skills" class="magnetic nav-item">Skills</a></li>
+            <li><a href="#education" class="magnetic nav-item">Education</a></li>
+            <li><a href="#contact" class="magnetic nav-item nav-cta">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <header class="hero" id="hero">
+            <div class="status-badge">
+                <span class="dot"></span> Available for Systems, AI/NLP & Robotics Engineering
+            </div>
+            <h1>Jesal Pande.<br><span>AI Systems Engineer, Quantitative Developer & Roboticist.</span></h1>
+            <p>I architect high-performance AI & NLP pipelines, quantitative sentiment trading engines, bit-perfect Rust systems, and imitation-learning robotic hardware.</p>
+            
+            <!-- HERO METRICS BAR -->
+            <div class="hero-stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">FinBERT + LeRobot</span>
+                    <span class="stat-label">AI Sentiment & Imitation Learning</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">Oxford Alpha</span>
+                    <span class="stat-label">Quant AltData Signal Pipeline</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">Bit-Perfect</span>
+                    <span class="stat-label">Rust Web Audio Architecture</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">ST3215</span>
+                    <span class="stat-label">Multi-Axis Kinematics & CAD</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- SECTION 1: FEATURED WORK & SYSTEMS -->
+        <section id="work" class="section-block">
+            <div class="section-header">
+                <span class="section-tag">[01 / FEATURED SYSTEMS & PROJECTS]</span>
+                <h2 class="section-title">Production Systems & Case Studies</h2>
+            </div>
+
+            <!-- BENTO GRID -->
+            <div class="grid">
+                
+                <!-- CASE STUDY: WSB ALPHA QUANTITATIVE SYSTEM -->
+                <div class="card col-2 tilt-card clickable-card" data-modal="wsb-modal">
+                    <div>
+                        <div class="card-header-flex">
+                            <span class="card-tag">[01 / Quantitative Research & NLP]</span>
+                            <span class="badge-pill">AltData Engine</span>
+                        </div>
+                        <h2>WSB Alpha — Quantitative Sentiment & NLP Pipeline</h2>
+                        <h3>Python 3.10+ & FinBERT + Apify + Oxford Normalization Engine</h3>
+                        <p>A quantitative research system (`wsb_alpha_system.py`) extracting actionable trading alpha from r/WallStreetBets "Due Diligence" posts with FinBERT sentiment & T+1 out-of-sample execution.</p>
+                        <ul>
+                            <li><strong>FinBERT NLP & Ticker Collision Resolution:</strong> Scans long-form DD posts, filters ticker-word collisions, and classifies financial sentiment.</li>
+                            <li><strong>Oxford Growth Normalization:</strong> Divides daily ticker mentions by total DD post volume to track genuine share of conversation over forum hype.</li>
+                            <li><strong>Look-Ahead Bias Elimination (T+1):</strong> Forces trade entry strictly at T+1 market close, evaluating real 1–90 day excess returns against SPY.</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer-action">
+                        <button class="action-btn magnetic" aria-label="Explore Research Pipeline">Explore Pipeline & Alpha Benchmarks &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- CASE STUDY: RESONANCE -->
+                <div class="card col-2 tilt-card clickable-card" data-modal="resonance-modal">
+                    <div>
+                        <div class="card-header-flex">
+                            <span class="card-tag">[02 / Audio & Systems]</span>
+                            <span class="badge-pill">Self-Hosted Archival</span>
+                        </div>
+                        <h2>Resonance — Bit-Perfect Audio Archival System</h2>
+                        <h3>Rust + Actix-web + React 18 + Web Audio API</h3>
+                        <p>A self-hosted music archival & streaming platform delivering bit-perfect playback from personal libraries with a glassmorphism interface.</p>
+                        <ul>
+                            <li><strong>Bit-Perfect Web Audio Pipeline:</strong> 10-band equalizer, gapless playback, and crossfade driven by Web Audio API.</li>
+                            <li><strong>High-Performance Rust Core:</strong> Actix-web backend with SQLite WAL mode & FTS5 full-text instant search across thousands of tracks.</li>
+                            <li><strong>Ecosystem Integrations:</strong> Synced LRCLIB lyrics, scrobbling (Last.fm/ListenBrainz), and playlist importing (Spotify, YouTube Music, SoundCloud).</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer-action">
+                        <button class="action-btn magnetic" aria-label="Inspect Resonance Architecture">Inspect Architecture & Specs &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- WORK EXPERIENCES: GLASSDOORS STUDIO -->
+                <div class="card tilt-card">
+                    <div>
+                        <span class="card-tag">[03 / Venture]</span>
+                        <h2>GlassDoors Studio</h2>
+                        <h3>Co-Founder</h3>
+                        <p style="margin-bottom: 16px;">A creative studio delivering native mobile applications, production-ready web deployments, and fluid UI/UX wireframes.</p>
+                        <p>We work directly at the interface of custom visual interfaces and cross-platform mobile frameworks.</p>
+                    </div>
+                </div>
+
+                <!-- CASE STUDY: BINANCE FUTURES TRADING BOT -->
+                <div class="card col-2 tilt-card clickable-card" data-modal="binance-modal">
+                    <div>
+                        <div class="card-header-flex">
+                            <span class="card-tag">[04 / Quantitative Systems]</span>
+                            <span class="badge-pill accent-red-pill">CLI Trading Bot</span>
+                        </div>
+                        <h2>Binance Futures Trading Bot</h2>
+                        <h3>Python 3.10+ & Binance USDT-M Futures REST API</h3>
+                        <p>A CLI-driven Python trading system with HMAC-SHA256 authentication for instant execution, position monitoring, and pre-flight risk management.</p>
+                        <ul>
+                            <li><strong>Full Order Scope:</strong> Supports Market, Limit, Stop-Market, and Stop-Loss / Take-Profit order types on USDT-M Futures.</li>
+                            <li><strong>Pre-Flight Safety Guards:</strong> Auto-validates pair precision, leverage bounds, tick size, and margin balance prior to API submittal.</li>
+                            <li><strong>Dual Execution Modes:</strong> Interactive terminal wizard (`python main.py`) and fast short command shortcuts (`python main.py buy BTCUSDT 0.002`).</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer-action">
+                        <button class="action-btn magnetic" aria-label="Launch Interactive Terminal Simulator">Launch CLI Simulator &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- CASE STUDY: ROBOTIC ARM -->
+                <div class="card col-2 tilt-card clickable-card" data-modal="robotics-modal">
+                    <div>
+                        <div class="card-header-flex">
+                            <span class="card-tag">[05 / Hardware & Kinematics]</span>
+                            <span class="badge-pill">Robotic Kinematics</span>
+                        </div>
+                        <h2>Master-Slave Robotic Arm with Imitation Learning</h2>
+                        <h3>Custom Hardware & Imitation Training</h3>
+                        <p>Designed and built a precise hardware synchronization system allowing an operator to naturally teach and program complex trajectories to a remote slave mechanism.</p>
+                        <ul>
+                            <li>Operates on <strong>ST3215 serial bus servo motors</strong> and custom controller configurations for absolute positional tracking.</li>
+                            <li>Configured control structures in <strong>Python</strong> utilizing Hugging Face's <strong>LeRobot</strong> machine learning framework.</li>
+                            <li>Successfully demonstrated robust "pick-and-place" operations using imitation learning from physical human guidance.</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer-action">
+                        <button class="action-btn magnetic" aria-label="Inspect Hardware Details">Inspect Hardware Kinematics &rarr;</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ELEGANT VISUAL SEPARATOR -->
+        <div class="section-separator" aria-hidden="true"></div>
+
+        <!-- SECTION 2: TECHNICAL STACK & SKILLS -->
+        <section id="skills" class="section-block">
+            <div class="section-header">
+                <span class="section-tag">[02 / TECHNICAL STACK & ECOSYSTEMS]</span>
+                <h2 class="section-title">Categorized Technical Expertise</h2>
+            </div>
+
+            <div class="skills-grid">
+                <!-- CATEGORY 1: AI & MACHINE LEARNING -->
+                <div class="card tilt-card">
+                    <span class="card-tag">[AI & Machine Learning]</span>
+                    <h3 style="color: var(--text); font-size: 1.2rem; margin-bottom: 12px;">Artificial Intelligence, NLP & Robotics ML</h3>
+                    <p style="font-size: 0.88rem; margin-bottom: 16px;">Deploying transformer sentiment models, Hugging Face LeRobot imitation learning, tokenization, and automated AltData extraction.</p>
+                    <div class="skills-list">
+                        <span class="skill-badge magnetic">FinBERT Transformers</span>
+                        <span class="skill-badge magnetic">Hugging Face LeRobot</span>
+                        <span class="skill-badge magnetic">Imitation Learning</span>
+                        <span class="skill-badge magnetic">Financial NLP Sentiment</span>
+                        <span class="skill-badge magnetic">Ticker Collision Filtering</span>
+                        <span class="skill-badge magnetic">Apify Scraper Engine</span>
+                        <span class="skill-badge magnetic">Out-Of-Sample Alpha Evaluation</span>
+                        <span class="skill-badge magnetic">Hugging Face Hub</span>
+                        <span class="skill-badge magnetic">PyTorch / SciKit-Learn</span>
+                        <span class="skill-badge magnetic">LLM Prompt & AltData Mining</span>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 2: QUANTITATIVE SYSTEMS & TRADING -->
+                <div class="card tilt-card">
+                    <span class="card-tag">[Quantitative Research & Trading]</span>
+                    <h3 style="color: var(--text); font-size: 1.2rem; margin-bottom: 12px;">Quantitative Engines & Financial Systems</h3>
+                    <p style="font-size: 0.88rem; margin-bottom: 16px;">Constructing algorithmic trading engines, exchange REST APIs, signal normalization models, and risk management guards.</p>
+                    <div class="skills-list">
+                        <span class="skill-badge magnetic">Python 3.10+ Async</span>
+                        <span class="skill-badge magnetic">Oxford Growth Normalization</span>
+                        <span class="skill-badge magnetic">Binance USDT-M Futures API</span>
+                        <span class="skill-badge magnetic">HMAC-SHA256 Auth</span>
+                        <span class="skill-badge magnetic">Pre-Flight Risk Guardian</span>
+                        <span class="skill-badge magnetic">Look-Ahead Bias (T+1) Engine</span>
+                        <span class="skill-badge magnetic">yfinance Bar Downloader</span>
+                        <span class="skill-badge magnetic">Pandas / NumPy Dataframes</span>
+                        <span class="skill-badge magnetic">Interactive CLI Simulators</span>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 3: SYSTEMS & AUDIO BACKEND -->
+                <div class="card tilt-card">
+                    <span class="card-tag">[High-Performance Systems & Media]</span>
+                    <h3 style="color: var(--text); font-size: 1.2rem; margin-bottom: 12px;">Low-Latency Backend & Bit-Perfect Audio</h3>
+                    <p style="font-size: 0.88rem; margin-bottom: 16px;">Architecting resilient Rust backends with multithreaded processing, Web Audio DSP pipelines, and SQLite database engines.</p>
+                    <div class="skills-list">
+                        <span class="skill-badge magnetic">Rust Core</span>
+                        <span class="skill-badge magnetic">Actix-web</span>
+                        <span class="skill-badge magnetic">Web Audio API</span>
+                        <span class="skill-badge magnetic">10-Band EQ & Crossfade</span>
+                        <span class="skill-badge magnetic">SQLite WAL & FTS5 Search</span>
+                        <span class="skill-badge magnetic">Rayon Multithreading</span>
+                        <span class="skill-badge magnetic">LRCLIB & Scrobbling APIs</span>
+                        <span class="skill-badge magnetic">Spotify / Soundcloud Import</span>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 4: ROBOTICS, KINEMATICS & CAD -->
+                <div class="card tilt-card">
+                    <span class="card-tag">[Hardware, Kinematics & Robotics]</span>
+                    <h3 style="color: var(--text); font-size: 1.2rem; margin-bottom: 12px;">Robotic Kinematics & CAD Engineering</h3>
+                    <p style="font-size: 0.88rem; margin-bottom: 16px;">Engineering physical multi-joint actuators, master-slave teleoperation, 2D/3D inverse kinematics solvers, and CAD modeling.</p>
+                    <div class="skills-list">
+                        <span class="skill-badge magnetic">ST3215 Serial Bus Servos</span>
+                        <span class="skill-badge magnetic">Master-Slave Teleoperation</span>
+                        <span class="skill-badge magnetic">Inverse Kinematics (2D/3D)</span>
+                        <span class="skill-badge magnetic">SOLIDWORKS CAD</span>
+                        <span class="skill-badge magnetic">Blender 3D Modeling</span>
+                        <span class="skill-badge magnetic">Microcontroller Schematics</span>
+                        <span class="skill-badge magnetic">Thermodynamics & Mechanics</span>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 5: WEB, MOBILE & UI/UX DESIGN -->
+                <div class="card tilt-card">
+                    <span class="card-tag">[Frontend & Mobile Application Design]</span>
+                    <h3 style="color: var(--text); font-size: 1.2rem; margin-bottom: 12px;">Modern Web & Cross-Platform UI</h3>
+                    <p style="font-size: 0.88rem; margin-bottom: 16px;">Crafting responsive, high-framerate interactive interfaces with GPU hardware acceleration and custom physics.</p>
+                    <div class="skills-list">
+                        <span class="skill-badge magnetic">React 18 & TypeScript</span>
+                        <span class="skill-badge magnetic">GlassDoors Studio Wireframes</span>
+                        <span class="skill-badge magnetic">HTML5 Canvas Kinematics</span>
+                        <span class="skill-badge magnetic">GPU-Accelerated Cursor & Lerp</span>
+                        <span class="skill-badge magnetic">3D Perspective Tilt Physics</span>
+                        <span class="skill-badge magnetic">Tailwind CSS & CSS Variables</span>
+                        <span class="skill-badge magnetic">Vite Build Tooling</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ELEGANT VISUAL SEPARATOR -->
+        <div class="section-separator" aria-hidden="true"></div>
+
+        <!-- SECTION 3: ACADEMICS & QUALIFICATIONS -->
+        <section id="education" class="section-block">
+            <div class="section-header">
+                <span class="section-tag">[03 / ACADEMICS & QUALIFICATIONS]</span>
+                <h2 class="section-title">Education & Verified Certifications</h2>
+            </div>
+
+            <div class="education-grid">
+                <!-- ACADEMIC BACKGROUND -->
+                <div class="card tilt-card">
+                    <span class="card-tag">[Academic Timeline]</span>
+                    <h2>Education Timeline</h2>
+                    <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 24px;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; font-weight: 600; flex-wrap: wrap; gap: 4px;">
+                                <span class="text-glow-hover" style="font-size: 1.05rem;">12th Pass — CN English Medium School (CNEM)</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan);">2026</span>
+                            </div>
+                            <p style="font-size: 0.9rem; margin-top: 6px; color: var(--text-muted);">Primary academic focus located in Ahmedabad, Gujarat, India.</p>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; font-weight: 600; flex-wrap: wrap; gap: 4px;">
+                                <span class="text-glow-hover" style="font-size: 1.05rem;">Resident Robotics Program — My Equation</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan);">2026</span>
+                            </div>
+                            <p style="font-size: 0.9rem; margin-top: 6px; color: var(--text-muted);">Hands-on intensive development surrounding hardware schematics, circuits, actuation kinematics, and microcontroller programming.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CERTIFICATIONS -->
+                <div class="card tilt-card">
+                    <span class="card-tag">[Certifications]</span>
+                    <h2>Verified Qualifications</h2>
+                    <div class="certs-container" style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+                        <div class="cert-item text-glow-hover">
+                            <h4>Introduction to Thermodynamics</h4>
+                            <span>University of Michigan</span>
+                        </div>
+                        <div class="cert-item text-glow-hover">
+                            <h4>Resident Robotics Program</h4>
+                            <span>My Equation</span>
+                        </div>
+                        <div class="cert-item text-glow-hover">
+                            <h4>Introduction to Engineering Mechanics</h4>
+                            <span>Georgia Tech (Coursera)</span>
+                        </div>
+                        <div class="cert-item text-glow-hover">
+                            <h4>SOLIDWORKS Foundations</h4>
+                            <span>Dassault Systèmes</span>
+                        </div>
+                        <div class="cert-item text-glow-hover">
+                            <h4>Generative AI Mastermind</h4>
+                            <span>Outskill</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ELEGANT VISUAL SEPARATOR -->
+        <div class="section-separator" aria-hidden="true"></div>
+
+        <!-- SECTION 4: CONTACT & CONNECTIVITY -->
+        <section id="contact" class="section-block">
+            <div class="section-header">
+                <span class="section-tag">[04 / CONNECTIVITY]</span>
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+
+            <div class="card contact-box tilt-card">
+                <span class="card-tag">[Direct Inquiry]</span>
+                <h2>Let's architect & build together.</h2>
+                <p style="max-width: 580px; margin: 0 auto 20px auto;">I am actively seeking challenging engineering internships, quantitative finance research roles, systems development, or custom web & mobile application collaborations.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin-top: 15px;">
+                    <a href="mailto:pandejesal@gmail.com" class="contact-link magnetic">pandejesal@gmail.com &rarr;</a>
+                </div>
+                <div style="margin-top: 24px; display: flex; gap: 24px; justify-content: center; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">
+                    <span>📍 Ahmedabad, Gujarat, India</span>
+                    <span>📞 +91 9106515036</span>
+                    <span>⚡ Response Time: &lt; 24 Hours</span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Jesal Pande. Designed & Engineered with customized Kinematic systems.</p>
+        </footer>
+    </main>
+
+    <!-- PROJECT MODALS -->
+    <!-- 0. WSB ALPHA QUANTITATIVE SYSTEM MODAL -->
+    <div class="modal-overlay" id="wsb-modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="card-tag">[Quantitative Research & AltData]</span>
+                <h2>WSB Alpha — Quantitative Sentiment & NLP Engine</h2>
+                <p>An end-to-end Python research pipeline (`wsb_alpha_system.py`) isolating financial alpha from Reddit "Due Diligence" posts using FinBERT and Oxford growth normalization.</p>
+            </div>
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="wsb-overview">Overview & Methodology</button>
+                <button class="tab-btn" data-tab="wsb-terminal">Pipeline Simulator</button>
+                <button class="tab-btn" data-tab="wsb-network">Co-Mention Network & Alpha</button>
+            </div>
+
+            <div class="tab-content active" id="wsb-overview">
+                <div class="specs-grid">
+                    <div class="spec-box">
+                        <span class="spec-label">Data Ingestion</span>
+                        <span class="spec-val">Apify Puppeteer Scraper (r/WallStreetBets "DD" Flair)</span>
+                    </div>
+                    <div class="spec-box">
+                        <span class="spec-label">NLP Sentiment</span>
+                        <span class="spec-val">FinBERT Transformer (Financial Domain Classification)</span>
+                    </div>
+                    <div class="spec-box">
+                        <span class="spec-label">Growth Normalization</span>
+                        <span class="spec-val">Oxford Subreddit Share Model (Mentions / Total Daily DDs)</span>
+                    </div>
+                    <div class="spec-box">
+                        <span class="spec-label">Execution Alignment</span>
+                        <span class="spec-val">Strict T+1 Market Close Entry (Zero Look-Ahead Bias)</span>
+                    </div>
+                </div>
+                <h4 style="margin-top: 20px; font-size: 1.05rem;">Core Pipeline Architecture & Methodology</h4>
+                <ul class="modal-feature-list">
+                    <li><strong>Ticker Collision Resolution:</strong> Custom Regex + Financial Blacklist resolves uppercase word-ticker ambiguities (e.g. distinguishing "FOR", "BUY", "ON", "ATH" from real tickers).</li>
+                    <li><strong>FinBERT Confidence Filtering:</strong> Evaluates deep learning sentiment probabilities; discards low-confidence ambiguous posts to maintain high signal purity.</li>
+                    <li><strong>Oxford Subreddit Growth Model:</strong> Normalizes daily mention counts by total DD post volume, preventing platform expansion from artificially inflating sentiment metrics.</li>
+                    <li><strong>Look-Ahead Bias Elimination:</strong> Forces trade entry strictly at T+1 close (one full trading day post-publication) and evaluates forward 1-90 day excess returns against SPY.</li>
+                    <li><strong>Re-Evaluation & Database Engine:</strong> Merges new runs into `wsb_factual_research_data.csv`, dropping duplicate post-ticker entries and auto-populating elapsed returns via `yfinance`.</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="wsb-terminal">
+                <p style="margin-bottom: 12px; color: var(--text-muted);">Execute pipeline stages to test the `wsb_alpha_system.py` engine:</p>
+                <div class="cli-shortcuts">
+                    <button class="cli-btn wsb-cli-btn" data-cmd="ingest">python wsb_alpha_system.py --ingest</button>
+                    <button class="cli-btn wsb-cli-btn" data-cmd="normalize">python wsb_alpha_system.py --normalize</button>
+                    <button class="cli-btn wsb-cli-btn" data-cmd="evaluate">python wsb_alpha_system.py --evaluate</button>
+                    <button class="cli-btn wsb-cli-btn" data-cmd="export">python wsb_alpha_system.py --export</button>
+                </div>
+                <div class="terminal-view" style="margin-top: 15px;">
+                    <div class="terminal-header">
+                        <span class="terminal-dot dot-red"></span>
+                        <span class="terminal-dot dot-yellow"></span>
+                        <span class="terminal-dot dot-green"></span>
+                        <span class="terminal-title">wsb_alpha_system.py — Quantitative Engine</span>
+                    </div>
+                    <div class="terminal-screen" id="wsb-terminal-output">
+                        <div class="term-line"><span class="term-prompt">quant_env&gt;</span> python wsb_alpha_system.py --ingest</div>
+                        <div class="term-line term-success">[INGESTION] Connected to Apify Puppeteer Scraper API...</div>
+                        <div class="term-line">[FETCH] 142 "Due Diligence" flaired posts retrieved for analysis</div>
+                        <div class="term-line">[NLP ENGINE] Running FinBERT Transformer Classification...</div>
+                        <div class="term-line term-success">&check; Ticker collisions resolved: 89 valid stock targets isolated</div>
+                        <div class="term-line">&check; FinBERT sentiment confidence: 64 Bullish | 18 Bearish | 7 Neutral</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="wsb-network">
+                <h4 style="font-size: 1.05rem; margin-bottom: 10px;">Co-Mention Network Graph & Excess Alpha (vs SPY)</h4>
+                <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px;">By isolating low-density "niche co-mention clusters" in `co_mentions.json`, the system filters out viral forum hype to detect early institutional interest.</p>
+                
+                <div class="architecture-diagram" style="margin-bottom: 20px;">
+                    <div class="arch-node highlight-cyan">
+                        <strong>Niche Co-Mention Cluster Alpha</strong>
+                        <span>Low Co-Mention Density &bull; High FinBERT Bullish Score</span>
+                    </div>
+                    <div class="arch-arrow">&darr; Forward Holding Returns (T+1 to T+30 Close)</div>
+                    <div class="arch-node">
+                        <strong>Target Stocks: +18.4% Return vs SPY +3.2% (+15.2% Alpha)</strong>
+                        <span>Evaluated out-of-sample across 1,200+ DD research posts</span>
+                    </div>
+                </div>
+
+                <div class="module-tree">
+                    <div class="module-item">
+                        <span class="module-name highlight-cyan">wsb_factual_research_data.csv</span>
+                        <span class="module-desc">Incremental database tracking post timestamps, tickers, FinBERT scores, and forward returns</span>
+                    </div>
+                    <div class="module-item">
+                        <span class="module-name highlight-cyan">co_mentions.json</span>
+                        <span class="module-desc">Daily adjacency graph mapping ticker co-mentions and niche cluster density</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. RESONANCE MODAL -->
+    <div class="modal-overlay" id="resonance-modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="card-tag">[System Deep Dive]</span>
+                <h2>Resonance — Bit-Perfect Audio Archival System</h2>
+                <p>Self-hosted music server featuring Rust Actix-web backend, SQLite FTS5 instant search, and Web Audio API playback engine.</p>
+            </div>
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="res-overview">Overview</button>
+                <button class="tab-btn" data-tab="res-arch">Architecture & Flow</button>
+                <button class="tab-btn" data-tab="res-audio">Audio Engine Demo</button>
+                <button class="tab-btn" data-tab="res-install">Deployment</button>
+            </div>
+
+            <div class="tab-content active" id="res-overview">
+                <div class="specs-grid">
+                    <div class="spec-box">
+                        <span class="spec-label">Audio Engine</span>
+                        <span class="spec-val">Web Audio API (10-Band EQ + Crossfade + Gapless)</span>
+                    </div>
+                    <div class="spec-box">
+                        <span class="spec-label">Backend Stack</span>
+                        <span class="spec-val">Rust, Actix-web, SQLite WAL, Rayon parallel scanner</span>
+                    </div>
+                    <div class="spec-box">
+                        <span class="spec-label">Frontend Stack</span>
+                        <span class="spec-val">React 18, TypeScript, Vite, Tailwind CSS, Framer Motion</span>
+                    </div>
+                    <div class="spec-box">
+                        <span class="spec-label">Integrations</span>
+                        <span class="spec-val">LRCLIB (Synced Lyrics), Last.fm / ListenBrainz (Scrobbling)</span>
+                    </div>
+                </div>
+                <h4 style="margin-top: 20px; font-size: 1.05rem;">Key System Highlights</h4>
+                <ul class="modal-feature-list">
+                    <li><strong>Bit-Perfect Audio Processing:</strong> HTMLAudioElement feeds directly into a custom Web Audio API graph (`EQ -> Gain -> Analyser -> Output`) preventing OS resampling artifacts.</li>
+                    <li><strong>Parallel Library Indexer:</strong> Rayon multi-threaded scanning extracts ID3/FLAC metadata via `lofty-rs` into SQLite database with FTS5 search.</li>
+                    <li><strong>Cross-Platform Distribution:</strong> Docker containers, Windows `.exe`, macOS `.dmg`, Linux AppImage, Android Termux installer, and iOS PWA support.</li>
+                    <li><strong>Glassmorphism UI:</strong> Ultra-responsive dark, light, and OLED AMOLED themes with real-time spectrum visualizer.</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="res-arch">
+                <div class="architecture-diagram">
+                    <div class="arch-node">
+                        <strong>Browser Client</strong>
+                        <span>React 18 + Zustand + Web Audio API</span>
+                    </div>
+                    <div class="arch-arrow">&darr; REST API (35+ Endpoints)</div>
+                    <div class="arch-node highlight-cyan">
+                        <strong>Rust Backend (Actix-web)</strong>
+                        <span>Parallel Scanner (Rayon) &bull; Metadata (lofty-rs) &bull; Lyrics & Scrobbling</span>
+                    </div>
+                    <div class="arch-arrow">&darr; FTS5 Query / Read</div>
+                    <div class="arch-node">
+                        <strong>SQLite (WAL Mode) & Untouched Music Files</strong>
+                        <span>MP3, FLAC, OGG, M4A, WAV, AAC</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="res-audio">
+                <p style="margin-bottom: 12px; color: var(--text-muted);">Interactive 10-Band Equalizer & Visualizer Simulation:</p>
+                <div class="eq-container">
+                    <div class="eq-bands">
+                        <div class="eq-band"><span class="eq-freq">32Hz</span><input type="range" min="-12" max="12" value="4" class="eq-slider"><span class="eq-val">+4dB</span></div>
+                        <div class="eq-band"><span class="eq-freq">64Hz</span><input type="range" min="-12" max="12" value="3" class="eq-slider"><span class="eq-val">+3dB</span></div>
+                        <div class="eq-band"><span class="eq-freq">125Hz</span><input type="range" min="-12" max="12" value="1" class="eq-slider"><span class="eq-val">+1dB</span></div>
+                        <div class="eq-band"><span class="eq-freq">250Hz</span><input type="range" min="-12" max="12" value="0" class="eq-slider"><span class="eq-val">0dB</span></div>
+                        <div class="eq-band"><span class="eq-freq">500Hz</span><input type="range" min="-12" max="12" value="-1" class="eq-slider"><span class="eq-val">-1dB</span></div>
+                        <div class="eq-band"><span class="eq-freq">1kHz</span><input type="range" min="-12" max="12" value="0" class="eq-slider"><span class="eq-val">0dB</span></div>
+                        <div class="eq-band"><span class="eq-freq">2kHz</span><input type="range" min="-12" max="12" value="2" class="eq-slider"><span class="eq-val">+2dB</span></div>
+                        <div class="eq-band"><span class="eq-freq">4kHz</span><input type="range" min="-12" max="12" value="4" class="eq-slider"><span class="eq-val">+4dB</span></div>
+                        <div class="eq-band"><span class="eq-freq">8kHz</span><input type="range" min="-12" max="12" value="5" class="eq-slider"><span class="eq-val">+5dB</span></div>
+                        <div class="eq-band"><span class="eq-freq">16kHz</span><input type="range" min="-12" max="12" value="3" class="eq-slider"><span class="eq-val">+3dB</span></div>
+                    </div>
+                    <div class="audio-visualizer-box">
+                        <canvas id="audio-visualizer-canvas" height="60"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="res-install">
+                <div class="terminal-view">
+                    <div class="terminal-header">
+                        <span class="terminal-dot dot-red"></span>
+                        <span class="terminal-dot dot-yellow"></span>
+                        <span class="terminal-dot dot-green"></span>
+                        <span class="terminal-title">docker-compose.yml</span>
+                    </div>
+                    <pre class="terminal-code">
+<code>version: '3.8'
+services:
+  resonance:
+    image: resonance/audio-server:latest
+    container_name: resonance_server
+    ports:
+      - "8080:8080"
+    volumes:
+      - /path/to/music:/music:ro
+      - resonance_data:/data
+    restart: unless-stopped</code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. BINANCE TRADING BOT MODAL -->
+    <div class="modal-overlay" id="binance-modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="card-tag">[System Deep Dive]</span>
+                <h2>Binance Futures Algorithmic Trading Bot</h2>
+                <p>CLI-driven Python trading application built for low latency USDT-M Futures execution with pre-flight risk safeguards.</p>
+            </div>
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="bin-overview">Overview & Architecture</button>
+                <button class="tab-btn" data-tab="bin-cli">Interactive Terminal Simulator</button>
+                <button class="tab-btn" data-tab="bin-modules">Modular Code Structure</button>
+            </div>
+
+            <div class="tab-content active" id="bin-overview">
+                <div class="specs-grid">
+                    <div class="spec-box">
+                        <span class="spec-label">Environment</span>
+                        <span class="spec-val">Python 3.10+, CLI Terminal</span>
+                    </div>
+                    <div class="spec-box">
+                        <span class="spec-label">Target Market</span>
+                        <span class="spec-val">Binance USDT-M Futures (Testnet & Live)</span>
+                    </div>
+                    <div class="spec-box">
+                        <span class="spec-label">Auth & Protocol</span>
+                        <span class="spec-val">REST API with HMAC-SHA256 Request Signing</span>
+                    </div>
+                    <div class="spec-box">
+                        <span class="spec-label">Order Scope</span>
+                        <span class="spec-val">Market, Limit, Stop-Market, TP/SL Trailing</span>
+                    </div>
+                </div>
+                <h4 style="margin-top: 20px; font-size: 1.05rem;">Safety Architecture & Validation Pipeline</h4>
+                <ul class="modal-feature-list">
+                    <li><strong>Pre-Flight Margin & Precision Checks:</strong> Verifies available USDT wallet balance against required leverage and calculates minimum lot step sizes before making REST API calls.</li>
+                    <li><strong>Zero-Config Credential Storage:</strong> Automatic first-run prompts detect missing environment variables and securely persist HMAC credentials locally.</li>
+                    <li><strong>Dual Command Engine:</strong> Offers step-by-step interactive wizard guide (`python main.py`) alongside ultra-fast 2-3 word CLI shortcuts for speed execution.</li>
+                    <li><strong>Audit Trade Logger:</strong> Outputs JSON & formatted text trade logs with exact server timestamps, execution latency, and filled prices.</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="bin-cli">
+                <p style="margin-bottom: 12px; color: var(--text-muted);">Click a quick command preset to test the terminal engine:</p>
+                <div class="cli-shortcuts">
+                    <button class="cli-btn" data-cmd="python main.py balance">python main.py balance</button>
+                    <button class="cli-btn" data-cmd="python main.py buy BTCUSDT 0.002">python main.py buy BTCUSDT 0.002</button>
+                    <button class="cli-btn" data-cmd="python main.py limit ETHUSDT SELL 0.05 3500">python main.py limit ETHUSDT SELL 0.05 3500</button>
+                    <button class="cli-btn" data-cmd="python main.py orders">python main.py orders</button>
+                </div>
+                <div class="terminal-view" style="margin-top: 15px;">
+                    <div class="terminal-header">
+                        <span class="terminal-dot dot-red"></span>
+                        <span class="terminal-dot dot-yellow"></span>
+                        <span class="terminal-dot dot-green"></span>
+                        <span class="terminal-title">cmd.exe — Binance Futures CLI</span>
+                    </div>
+                    <div class="terminal-screen" id="binance-terminal-output">
+                        <div class="term-line"><span class="term-prompt">C:\trading_bot&gt;</span> python main.py balance</div>
+                        <div class="term-line term-success">[CONNECTED] Binance USDT-M Futures Testnet API v2</div>
+                        <div class="term-line">---------------------------------------------------------</div>
+                        <div class="term-line"> Total Wallet Balance:   15,240.50 USDT</div>
+                        <div class="term-line"> Available Margin:        12,890.10 USDT</div>
+                        <div class="term-line"> Unrealized PnL:         +245.40 USDT (Active Leverage: 10x)</div>
+                        <div class="term-line"> Active Open Positions:   1 (BTCUSDT Long @ 64,200)</div>
+                        <div class="term-line">---------------------------------------------------------</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="bin-modules">
+                <div class="module-tree">
+                    <div class="module-item">
+                        <span class="module-name highlight-cyan">cli.py</span>
+                        <span class="module-desc">Interactive wizard engine, sys.argv flag parser, command router</span>
+                    </div>
+                    <div class="module-item">
+                        <span class="module-name highlight-red">orders.py</span>
+                        <span class="module-desc">Market, limit, stop-market, and cancelation request builders</span>
+                    </div>
+                    <div class="module-item">
+                        <span class="module-name">client.py</span>
+                        <span class="module-desc">HMAC-SHA256 signature generator, HTTP REST client, connection pooler</span>
+                    </div>
+                    <div class="module-item">
+                        <span class="module-name">validators.py</span>
+                        <span class="module-desc">Tick size math, minimum lot precision, margin balance validator</span>
+                    </div>
+                    <div class="module-item">
+                        <span class="module-name">config.py</span>
+                        <span class="module-desc">Zero-config onboarding, API key loading, endpoints switcher</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. ROBOTICS MODAL -->
+    <div class="modal-overlay" id="robotics-modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="card-tag">[Hardware & Kinematics]</span>
+                <h2>Master-Slave Robotic Arm with Imitation Learning</h2>
+                <p>Custom multi-axis hardware synchronization paired with Python machine learning for trajectory replication.</p>
+            </div>
+            <div class="specs-grid" style="margin-top: 20px;">
+                <div class="spec-box">
+                    <span class="spec-label">Actuator System</span>
+                    <span class="spec-val">ST3215 Serial Bus Servos (High Torque)</span>
+                </div>
+                <div class="spec-box">
+                    <span class="spec-label">ML Framework</span>
+                    <span class="spec-val">Hugging Face LeRobot & PyTorch</span>
+                </div>
+                <div class="spec-box">
+                    <span class="spec-label">Control Language</span>
+                    <span class="spec-val">Python 3.9+ & Custom Kinematics Engine</span>
+                </div>
+                <div class="spec-box">
+                    <span class="spec-label">Cad & Assembly</span>
+                    <span class="spec-val">SOLIDWORKS & 3D Printed PETG Chassis</span>
+                </div>
+            </div>
+            <h4 style="margin-top: 20px; font-size: 1.05rem;">Technical Implementation</h4>
+            <ul class="modal-feature-list">
+                <li><strong>Teleoperation Synchronization:</strong> High-frequency serial polling captures human joint angle trajectories from master arm without delay.</li>
+                <li><strong>Imitation Neural Network:</strong> Dataset recording logs servo positions and video frames to train pick-and-place imitation policies.</li>
+                <li><strong>Dynamic Inverse Kinematics:</strong> Trigonometric joint solver continuously computes real-time 3D Cartesian coordinates for smooth end-effector movement.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
