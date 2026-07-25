@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+bun.lock
+
+# Build & System Files
+.DS_Store
+*.log
+.env
+.env.local

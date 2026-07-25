@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesal Pande | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Jesal Pande - Portfolio">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Sidebar / Navigation -->
+        <aside class="sidebar">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="#" class="logo">Jesal Pande</a>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+            </div>
+            <p class="bio-text">18-year-old aspiring Mechanical Engineer and entrepreneur based in Ahmedabad, India. Currently on a gap year building projects, running my own business, and seeking internships before heading to Canada.</p>
+            
+            
+            
+
+        
+            <div class="sidebar-widget">
+                <h4 class="widget-title">Core Skills</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <span style="font-size: 0.8rem; font-family: var(--font-mono); background: var(--surface0); color: var(--text); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid var(--border-color);">SOLIDWORKS</span>
+                    <span style="font-size: 0.8rem; font-family: var(--font-mono); background: var(--surface0); color: var(--text); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid var(--border-color);">Hardware Design</span>
+                    <span style="font-size: 0.8rem; font-family: var(--font-mono); background: var(--surface0); color: var(--text); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid var(--border-color);">Python</span>
+                    <span style="font-size: 0.8rem; font-family: var(--font-mono); background: var(--surface0); color: var(--text); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid var(--border-color);">Machine Learning</span>
+                    <span style="font-size: 0.8rem; font-family: var(--font-mono); background: var(--surface0); color: var(--text); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid var(--border-color);">TypeScript</span>
+                    <span style="font-size: 0.8rem; font-family: var(--font-mono); background: var(--surface0); color: var(--text); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid var(--border-color);">React</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        
+        <main class="main-content">
+            <header class="page-header">
+                <div class="status-badge"><span class="dot"></span> Open for Opportunities</div>
+                <h1 style="font-weight: 700; letter-spacing: -0.5px;">Experience</h1>
+            </header>
+
+            <div class="projects-grid" style="margin-bottom: 2rem;">
+                <!-- GlassDoors Studio -->
+                <div class="project-card" style="grid-column: 1 / -1;">
+                    <div class="project-header">
+                        <span class="card-tag">[Creative Studio]</span>
+                    </div>
+                    <h3 class="project-title">GlassDoors Studio — Co-Founder</h3>
+                    <p class="project-desc" style="margin-bottom: 0.5rem;">A creative studio delivering native mobile applications, production-ready web deployments, and fluid UI/UX wireframes.</p>
+                    <p class="project-desc">We work directly at the interface of custom visual interfaces and cross-platform mobile frameworks.</p>
+                </div>
+            </div>
+
+            <header class="page-header">
+                <h1 style="font-weight: 700; letter-spacing: -0.5px;">Featured Projects</h1>
+            </header>
+
+            <div class="projects-grid">
+                
+                <!-- WSB Alpha System -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="card-tag">[Quant & NLP Pipeline]</span>
+                    </div>
+                    <h3 class="project-title">WSB Alpha System</h3>
+                    <p class="project-desc" style="margin-bottom: 0.5rem;">An end-to-end Python research pipeline isolating financial alpha from Reddit "Due Diligence" posts using FinBERT and Oxford growth normalization.</p>
+                    <ul class="card-list">
+                        <li><strong>Ticker Collision Resolution:</strong> Custom Regex + Financial Blacklist resolves ambiguities.</li>
+                        <li><strong>FinBERT NLP:</strong> Deep learning sentiment probabilities to maintain high signal purity.</li>
+                        <li><strong>Oxford Normalization:</strong> Divides daily ticker mentions by total DD post volume.</li>
+                        <li><strong>T+1 Execution:</strong> Forces trade entry strictly at T+1 market close.</li>
+                    </ul>
+                </div>
+
+                <!-- Robotic Arm -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="card-tag">[Hardware & Kinematics]</span>
+                    </div>
+                    <h3 class="project-title">Master-Slave Robotic Arm</h3>
+                    <p class="project-desc" style="margin-bottom: 0.5rem;">Custom multi-axis hardware synchronization paired with Python machine learning for trajectory replication via Imitation Learning.</p>
+                    <ul class="card-list">
+                        <li><strong>Teleoperation:</strong> High-frequency serial polling captures human joint angle trajectories.</li>
+                        <li><strong>Imitation Network:</strong> Hugging Face LeRobot & PyTorch for pick-and-place imitation policies.</li>
+                        <li><strong>Hardware:</strong> ST3215 Serial Bus Servos & 3D Printed PETG Chassis.</li>
+                    </ul>
+                </div>
+
+                <!-- Resonance Engine -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="card-tag">[Music Archival]</span>
+                    </div>
+                    <h3 class="project-title">Resonance</h3>
+                    <p class="project-desc" style="margin-bottom: 0.5rem;">Premium self-hosted music archival system prioritizing speed and audio quality with bit-perfect playback, built with Rust and React.</p>
+                    <a href="https://github.com/pandejesal/resonance" target="_blank" class="project-link">View Repository &rarr;</a>
+                </div>
+
+                <!-- Binance CLI -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="card-tag">[API Client]</span>
+                    </div>
+                    <h3 class="project-title">Binance Futures Trading Bot</h3>
+                    <p class="project-desc" style="margin-bottom: 0.5rem;">A production-grade command-line trading application for placing orders on Binance Futures Testnet, featuring direct HTTP REST API integration and a full-stack web UI controller.</p>
+                    <a href="https://github.com/pandejesal/Binance-Futures-Trading-Bot" target="_blank" class="project-link">View Repository &rarr;</a>
+                </div>
+
+                <!-- SafeSponsor AI -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="card-tag">[AI & TypeScript]</span>
+                    </div>
+                    <h3 class="project-title">SafeSponsor-AI</h3>
+                    <p class="project-desc" style="margin-bottom: 0.5rem;">A Brand Safety Influencer Vetting Tool for E-Commerce Brands.</p>
+                    <a href="https://github.com/pandejesal/SafeSponsor-AI" target="_blank" class="project-link">View Repository &rarr;</a>
+                </div>
+                
+                <!-- Project-Rainfall -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="card-tag">[JavaScript]</span>
+                    </div>
+                    <h3 class="project-title">Project-Rainfall</h3>
+                    <p class="project-desc" style="margin-bottom: 0.5rem;">An AI-powered intelligent web application that eliminates language barriers and automates FIR data extraction.</p>
+                    <a href="https://github.com/pandejesal/project-rainfall" target="_blank" class="project-link">View Repository &rarr;</a>
+                </div>
+            </div>
+        </main>
+
+        
+        <!-- Right Sidebar (Extra Info like Jason's) -->
+        <aside class="right-sidebar">
+
+            <div class="sidebar-widget" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                <div style="padding: 1.25rem 1.25rem 0.5rem 1.25rem;">
+                    <h4 class="widget-title" style="margin-bottom: 0.25rem; font-size: 0.75rem; color: var(--subtext0);">Currently Based In 📍</h4>
+                    <p style="font-weight: 500; color: var(--text); font-size: 0.95rem;">Ahmedabad, India</p>
+                </div>
+                <div id="location-map" style="height: 140px; width: 100%; background-color: var(--bg-base); border-top: 1px solid var(--surface0); z-index: 1; margin-top: auto;"></div>
+            </div>
+
+             <div class="sidebar-widget">
+                <h4 class="widget-title">Connect</h4>
+                <div class="connect-links">
+                    <a href="https://github.com/pandejesal" target="_blank" class="action-btn">GitHub</a>
+                    <a href="https://www.linkedin.com/in/jesal-pande-312641362/" target="_blank" class="action-btn">LinkedIn</a>
+                    <div class="contact-details">
+                        <span class="contact-detail">pandejesal@gmail.com</span>
+                        <span class="contact-detail">+91 9106515036</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        &uarr; Top
+    </button>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
