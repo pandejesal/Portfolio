@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "node server.js",
-    "build": "echo 'No build step needed for static site'",
+    "build": "mkdir -p dist && cp index.html style.css script.js dist/ || true",
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^5.2.1"
   }
 }
