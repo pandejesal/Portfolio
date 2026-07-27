@@ -1,8 +1,0 @@
-{
-  "name": "Jesal Pande Portfolio",
-  "description": "AI Systems Engineer, Quantitative Developer & Roboticist Portfolio featuring FinBERT NLP sentiment pipelines, Resonance bit-perfect audio, Binance futures trading bots, and LeRobot imitation learning kinematics.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
