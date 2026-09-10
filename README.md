@@ -12,6 +12,7 @@ Live site: https://pandejesal.github.io/Portfolio/
 * **Binance Futures Trading Bot** — Zero-dependency Python CLI for USDT-M Testnet (HMAC-SHA256 REST, clock-drift correction, secret-redacting logs) + React dashboard.
 * **SafeSponsor-AI** — Next.js 15 brand-safety dossiers: web research, YouTube transcript + comment toxicity audit, 0–100 score, Gemini with Groq fallback, Firebase + Dodo Payments.
 * **Project-Rainfall** — AI-powered intelligent web application that eliminates language barriers and automates FIR data extraction.
+* **Eng Interview Simulator** — Browser-based Kira Talent & UBC Personal Profile simulator (Waterloo/UofT/UBC): 143 timed questions, live transcription, WPM analytics, AI coaching prompts. 100% client-side.
 * **LinkedIn Post CLI** — Terminal poster with free Gemini ghostwriter mode.
 
 ## How it works

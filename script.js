@@ -32,6 +32,8 @@ function initLocationMap() {
                 fellBack = true;
                 try { map.removeLayer(primary); } catch (e) { /* noop */ }
                 fallback.addTo(map);
+                // OSM tiles are light — force them dark via CSS so the map stays black
+                el.classList.add('is-fallback-dark');
             }
         });
         primary.addTo(map);
