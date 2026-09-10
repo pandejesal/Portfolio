@@ -1,79 +1,139 @@
-// Map initialization
-if (document.getElementById('location-map')) {
-    const map = L.map('location-map', {
-        zoomControl: false,
-        scrollWheelZoom: false,
-        dragging: false,
-        doubleClickZoom: false,
-        touchZoom: false,
-        attributionControl: false
-    }).setView([23.0225, 72.5714], 3); // Ahmedabad
+// Map initialization (deferred, guarded, with tile fallback)
+function initLocationMap() {
+    const el = document.getElementById('location-map');
+    if (!el) return;
+    if (!window.L || typeof L.map !== 'function') {
+        showMapFallback();
+        return;
+    }
+    try {
+        if (el._leaflet_id) return; // already initialized
+        const coords = [23.0225, 72.5714]; // Ahmedabad
+        const map = L.map('location-map', {
+            zoomControl: false,
+            scrollWheelZoom: false,
+            dragging: false,
+            doubleClickZoom: false,
+            touchZoom: false,
+            attributionControl: false,
+            keyboard: false
+        }).setView(coords, 11);
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-        maxZoom: 19
-    }).addTo(map);
+        const primary = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter/{z}/{x}/{y}{r}.png', {
+            maxZoom: 19,
+            subdomains: 'abcd'
+        });
+        const fallback = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19
+        });
+        let fellBack = false;
+        primary.on('tileerror', () => {
+            if (!fellBack) {
+                fellBack = true;
+                try { map.removeLayer(primary); } catch (e) { /* noop */ }
+                fallback.addTo(map);
+            }
+        });
+        primary.addTo(map);
 
-    const customIcon = L.divIcon({
-        className: 'custom-ping-marker',
-        html: '<div class="map-ping-container"><div class="map-ping-dot"></div><div class="map-ping-animation"></div></div>',
-        iconSize: [12, 12],
-        iconAnchor: [6, 6]
-    });
+        const customIcon = L.divIcon({
+            className: 'custom-ping-marker',
+            html: '<div class="map-ping-container"><div class="map-ping-dot"></div><div class="map-ping-animation"></div></div>',
+            iconSize: [12, 12],
+            iconAnchor: [6, 6]
+        });
 
-    L.marker([23.0225, 72.5714], {icon: customIcon}).addTo(map);
+        L.marker(coords, { icon: customIcon, interactive: false, keyboard: false }).addTo(map);
 
-    window.addEventListener('resize', () => {
-        map.invalidateSize();
-    });
+        // Leaflet needs a size recalc after paint (sticky sidebars report 0 width otherwise)
+        const refresh = () => { try { map.invalidateSize(); } catch (e) { /* noop */ } };
+        setTimeout(refresh, 100);
+        setTimeout(refresh, 600);
+        window.addEventListener('resize', refresh);
+    } catch (err) {
+        console.warn('Map init failed:', err);
+        showMapFallback();
+    }
+}
+
+function showMapFallback() {
+    const fb = document.getElementById('location-map-fallback');
+    if (fb) fb.hidden = false;
 }
 
 // Back to Top functionality
 document.addEventListener("DOMContentLoaded", () => {
     const backToTopBtn = document.getElementById('back-to-top');
-    
+
     if (backToTopBtn) {
+        const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
                 backToTopBtn.classList.add('visible');
             } else {
                 backToTopBtn.classList.remove('visible');
             }
-        });
+        }, { passive: true });
 
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth'
+                behavior: reduceMotion ? 'auto' : 'smooth'
             });
         });
     }
+
+    const yearEl = document.getElementById('current-year');
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 });
 
 // Theme Toggle functionality
+const MOON_ICON = '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>';
+const SUN_ICON = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>';
+
+function syncThemeIcon() {
+    const themeIcon = document.getElementById('theme-icon');
+    if (!themeIcon) return;
+    const isBlue = document.documentElement.getAttribute('data-theme') === 'midnight-blue';
+    themeIcon.innerHTML = isBlue ? SUN_ICON : MOON_ICON;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-    
+
     // Check local storage for theme
-    const currentTheme = localStorage.getItem('theme') || 'dark-black';
-    if (currentTheme === 'midnight-blue') {
-        document.documentElement.setAttribute('data-theme', 'midnight-blue');
-    }
-    
+    try {
+        const currentTheme = localStorage.getItem('theme') || 'dark-black';
+        if (currentTheme === 'midnight-blue') {
+            document.documentElement.setAttribute('data-theme', 'midnight-blue');
+        }
+    } catch (e) { /* private mode: ignore */ }
+    syncThemeIcon();
+
     if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', () => {
-            let theme = document.documentElement.getAttribute('data-theme');
-            if (theme === 'midnight-blue') {
-                document.documentElement.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'dark-black');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'midnight-blue');
-                localStorage.setItem('theme', 'midnight-blue');
+            const theme = document.documentElement.getAttribute('data-theme');
+            try {
+                if (theme === 'midnight-blue') {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'dark-black');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'midnight-blue');
+                    localStorage.setItem('theme', 'midnight-blue');
+                }
+            } catch (e) {
+                if (theme === 'midnight-blue') {
+                    document.documentElement.removeAttribute('data-theme');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'midnight-blue');
+                }
             }
+            syncThemeIcon();
         });
     }
 
-    // Initialize GitHub API Repos & Contributions
+    // Initialize map + GitHub API Repos & Contributions (map failure must not break the rest)
+    try { initLocationMap(); } catch (e) { console.warn('Map init threw:', e); showMapFallback(); }
     fetchAndRenderRepoStats();
     initGitHubContributionGraph();
 });
@@ -127,7 +187,11 @@ async function fetchAndRenderRepoStats() {
                     repoDataMap[`pandejesal/${shortName}`] = stats;
                     repoDataMap[shortName] = stats;
                 });
-                localStorage.setItem(cacheKey, JSON.stringify({ timestamp: Date.now(), data: repoDataMap }));
+                try {
+                    localStorage.setItem(cacheKey, JSON.stringify({ timestamp: Date.now(), data: repoDataMap }));
+                } catch (e) { /* storage full/private mode */ }
+            } else if (response.status === 403) {
+                console.warn('GitHub repo API rate-limited; showing cached/zero values.');
             }
         }
 
@@ -176,8 +240,8 @@ async function initGitHubContributionGraph() {
         try {
             allContributionsData = await fetchGitHubEventsFallback();
         } catch (err2) {
-            console.warn('GitHub REST API failed, using resilient fallback dataset:', err2);
-            allContributionsData = generateFallbackContributions(currentSelectedYear);
+            console.warn('GitHub REST API failed, showing empty honest state:', err2);
+            allContributionsData = emptyContributions(currentSelectedYear);
         }
     }
 
@@ -195,6 +259,8 @@ async function initGitHubContributionGraph() {
 }
 
 async function fetchGitHubEventsFallback() {
+    // Honest fallback: only real public events from the last ~90 days.
+    // Days without events stay at 0 — never synthesize activity.
     const res = await fetch('https://api.github.com/users/pandejesal/events?per_page=100');
     if (!res.ok) throw new Error('GitHub API ' + res.status);
     const events = await res.json();
@@ -213,25 +279,18 @@ async function fetchGitHubEventsFallback() {
     const days = generateYearDays(currentYr);
     let totalCount = 0;
 
-    days.forEach((day, idx) => {
+    days.forEach((day) => {
         if (dateCounts[day.date]) {
             day.count = dateCounts[day.date];
             day.level = Math.min(4, Math.ceil(day.count / 2));
             totalCount += day.count;
-        } else {
-            const hash = (idx * 29 + 11) % 100;
-            if (hash > 48) {
-                const count = (hash % 4) + 1;
-                day.count = count;
-                day.level = Math.min(4, Math.ceil(count / 2));
-                totalCount += count;
-            }
         }
     });
 
     return {
         total: { [currentYr]: totalCount },
-        contributions: days
+        contributions: days,
+        partial: true // REST events API only covers recent history
     };
 }
 
@@ -313,6 +372,14 @@ function renderContributionGraph() {
     if (currentStreakEl) currentStreakEl.textContent = `${currentStreak} days`;
     if (maxStreakEl) maxStreakEl.textContent = `${maxStreak} days`;
     if (activeDaysEl) activeDaysEl.textContent = activeDays;
+
+    // Honest empty / partial states — never imply fake activity
+    const inspectorCount = document.getElementById('inspector-count');
+    if (allContributionsData && allContributionsData.empty && totalCount === 0 && inspectorCount) {
+        inspectorCount.textContent = 'Live data unavailable — see the GitHub profile for full history';
+    } else if (allContributionsData && allContributionsData.partial && inspectorCount) {
+        inspectorCount.textContent = 'Recent public events only (last ~90 days) — see GitHub for full history';
+    }
 
     // Build Heatmap Grid
     const grid = document.getElementById('heatmap-grid');
@@ -472,21 +539,16 @@ function generateYearDays(year) {
     return days;
 }
 
-function generateFallbackContributions(year) {
+function emptyContributions(year) {
     const targetYr = year || new Date().getFullYear().toString();
-    const days = generateYearDays(targetYr);
-    let total = 0;
-    days.forEach((day, idx) => {
-        const hash = (idx * 37 + 13) % 100;
-        if (hash > 40) {
-            const count = (hash % 5) + 1;
-            day.count = count;
-            day.level = Math.min(4, Math.ceil(count / 2));
-            total += count;
-        }
-    });
     return {
-        total: { [targetYr]: total },
-        contributions: days
+        total: { [targetYr]: 0 },
+        contributions: generateYearDays(targetYr),
+        empty: true
     };
+}
+
+// Legacy alias kept for compatibility — now returns an honest empty year.
+function generateFallbackContributions(year) {
+    return emptyContributions(year);
 }

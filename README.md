@@ -1,20 +1,36 @@
-# Jesal Pande — Professional Systems & AI Portfolio
+# Jesal Pande — Portfolio
 
-### Development Note
-I am an 18-year-old from India taking a gap year, preparing for a Mechanical/Mechatronics Engineering degree at a top Canadian university. For this project, I acted as the systems architect. I designed the architecture, the system logic, and the hardware constraints. Because I am still learning advanced software coding, I orchestrated AI tools to act as my coding tutor and compiler. I mapped out the concepts and workflows, and the AI assisted me with the exact code generation and backend syntax to bring it to life. Honesty is my brand.
+18-year-old from Ahmedabad, India, on a gap year before a Mechanical/Mechatronics Engineering degree in Canada. Founder of **Erowan** (formerly GlassDoors Studio). I act as systems architect — mapping concepts and workflows — and use AI as my coding tutor and compiler for exact syntax. Honesty is my brand.
 
-### What It Does
-This is a high-performance, responsive portfolio website. It acts as a single access point for my engineering work, containing my technical projects across four main domains: Quantitative Systems, NLP Pipelines, Bit-Perfect Audio Architecture, and Robotic Kinematics.
+Live site: https://pandejesal.github.io/Portfolio/
 
-### How It Works (Architecture)
-The site operates on a standard web application model.
+## Featured work
 
-* **Frontend Layer (`index.html` & `style.css`):** Defines the core structure, layout, and visual parameters. It is built to be fast and responsive across all devices.
-* **Interactive Layer (`script.js`):** Executes all frontend logic, DOM manipulation, and user events directly within the browser.
-* **Server Layer (`server.js`):** A lightweight backend environment designed to manage network requests and local routing.
-* **Deployment:** The production build is hosted and deployed live via GitHub Pages.
+* **Erowan (formerly GlassDoors Studio)** — https://erowan.vercel.app · Gulf niche websites (salons, restaurants, clinics, real estate). Next.js 14 + TypeScript + Tailwind on Vercel. $250 base + $150 booking/ordering, 48h delivery. Demos carry an honest "Concept Demo — Not a real client" badge.
+* **WSB Alpha System** — https://pandejesal.github.io/WSB-Alpha-System/ · Autonomous agentic quant system (retail sentiment → statistically-hardened strategies → paper execution) on GitHub free tier. ~130 Python modules, 15 strategy specs, 14 Actions pipelines. Lookahead-free T+1, permutation / walk-forward / deflated-Sharpe gates, fail-closed ops (`LIVE_TRADING_ENABLED=False`).
+* **Resonance** — Self-hosted music archival (Rust + React): bit-perfect playback, 500k+ tracks, FTS5 search, Subsonic API, PWA offline, Android shell via JNI.
+* **Binance Futures Trading Bot** — Zero-dependency Python CLI for USDT-M Testnet (HMAC-SHA256 REST, clock-drift correction, secret-redacting logs) + React dashboard.
+* **SafeSponsor-AI** — Next.js 15 brand-safety dossiers: web research, YouTube transcript + comment toxicity audit, 0–100 score, Gemini with Groq fallback, Firebase + Dodo Payments.
+* **Project-Rainfall** — AI-powered intelligent web application that eliminates language barriers and automates FIR data extraction.
+* **LinkedIn Post CLI** — Terminal poster with free Gemini ghostwriter mode.
 
-### Tech Stack
-* **Frontend:** HTML5, CSS3, Vanilla JavaScript
-* **Backend:** Node.js
+## How it works
+
+* **Frontend (`index.html` & `style.css`):** Structure, layout, responsive 3-column grid, dark-black / midnight-blue themes.
+* **Interactive layer (`script.js`):** Leaflet location map (guarded init + OSM fallback), theme toggle, GitHub repo stats (30-min cache), contribution heatmap (primary API → honest recent-events fallback → honest empty state; never synthetic data).
+* **Server (`server.js`):** Lightweight Express static server for local dev only (`PORT` env supported, basic hardening headers).
+* **Deployment:** Production is static hosting via GitHub Pages. `npm run build` copies `index.html`/`style.css`/`script.js` to `dist/` (cross-platform).
+
+## Tech stack
+
+* **Frontend:** HTML5, CSS3, Vanilla JavaScript, Leaflet 1.9.4
+* **Local dev:** Node.js + Express
 * **Hosting:** GitHub Pages
+
+## Local development
+
+```bash
+npm install
+npm run dev   # http://localhost:3000
+npm run build # cross-platform copy to dist/
+```

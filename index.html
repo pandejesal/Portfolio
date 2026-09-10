@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jesal Pande | Portfolio</title>
+    <title>Jesal Pande | Mechanical Engineer, Quant Systems & Founder of Erowan</title>
+    <meta name="description" content="Jesal Pande — 18-year-old aspiring Mechanical/Mechatronics Engineer and founder of Erowan (formerly GlassDoors Studio). Building quant trading systems (WSB Alpha), self-hosted music archival (Resonance), trading bots, and brand-safety AI. Based in Ahmedabad, heading to Canada.">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://pandejesal.github.io/Portfolio/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jesal Pande | Portfolio">
+    <meta property="og:description" content="Mechanical Engineer & entrepreneur — WSB Alpha quant system, Erowan studio, Resonance music archival, trading bots, SafeSponsor AI.">
+    <meta property="og:url" content="https://pandejesal.github.io/Portfolio/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Jesal Pande | Portfolio">
+    <meta name="twitter:description" content="Quant systems, robotics hardware, self-hosted audio, and Erowan studio work.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23000'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='bold' fill='%2322d3ee' text-anchor='middle'%3EJP%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Jesal Pande - Portfolio">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://api.github.com">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jesal Pande",
+        "jobTitle": "Aspiring Mechanical Engineer & Founder of Erowan",
+        "address": { "@type": "PostalAddress", "addressLocality": "Ahmedabad", "addressCountry": "IN" },
+        "url": "https://pandejesal.github.io/Portfolio/",
+        "sameAs": ["https://github.com/pandejesal", "https://www.linkedin.com/in/jesal-pande", "https://erowan.vercel.app", "https://pandejesal.github.io/WSB-Alpha-System/"]
+    }
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <div class="layout-container">
         <!-- Sidebar / Navigation -->
         <aside class="sidebar">
@@ -18,7 +42,7 @@
                     <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </button>
             </div>
-            <p class="bio-text">18-year-old aspiring Mechanical Engineer and entrepreneur based in Ahmedabad, India. Currently on a gap year building projects, running my own business, and seeking internships before heading to Canada.</p>
+            <p class="bio-text">18-year-old aspiring Mechanical/Mechatronics Engineer and founder of <a href="https://erowan.vercel.app" target="_blank" rel="noopener" class="bio-link">Erowan</a>, based in Ahmedabad, India. On a gap year building quant systems, hardware &amp; AI projects, and shipping client websites before heading to Canada.</p>
             
             
             
@@ -39,21 +63,29 @@
 
         <!-- Main Content -->
         
-        <main class="main-content">
+        <main class="main-content" id="main-content">
             <header class="page-header">
                 <div class="status-badge"><span class="dot"></span> Open for Opportunities</div>
                 <h1 style="font-weight: 700; letter-spacing: -0.5px;">Experience</h1>
             </header>
 
             <div class="projects-grid" style="margin-bottom: 2rem;">
-                <!-- GlassDoors Studio -->
-                <div class="project-card" style="grid-column: 1 / -1;">
-                    <div class="project-header">
-                        <span class="card-tag">[Creative Studio]</span>
+                <!-- Erowan (formerly GlassDoors Studio) -->
+                <div class="project-card" data-repo="pandejesal/erowan" style="grid-column: 1 / -1;">
+                    <div class="project-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="card-tag">[Erowan · Gulf Niche System — formerly GlassDoors Studio]</span>
+                        <div class="repo-stats-badge" data-repo="pandejesal/erowan"></div>
                     </div>
-                    <h3 class="project-title">GlassDoors Studio — Co-Founder</h3>
-                    <p class="project-desc" style="margin-bottom: 0.5rem;">A creative studio delivering native mobile applications, production-ready web deployments, and fluid UI/UX wireframes.</p>
-                    <p class="project-desc">We work directly at the interface of custom visual interfaces and cross-platform mobile frameworks.</p>
+                    <h3 class="project-title">Erowan — Founder <span class="rename-note">(formerly GlassDoors Studio)</span></h3>
+                    <p class="project-desc" style="margin-bottom: 0.5rem;">Websites for Gulf salons, restaurants, clinics &amp; real estate. $250 base (~920 AED) + $150 booking/ordering add-on, 48-hour delivery, fully remote from Ahmedabad (IST).</p>
+                    <p class="project-desc">Next.js 14 App Router + TypeScript + Tailwind on Vercel free tier. Dedicated routes per niche plus live concept demos — every demo carries an honest <em>“Concept Demo — Not a real client”</em> badge until replaced by paying clients.</p>
+                    <div class="tech-pills" aria-label="Erowan tech stack">
+                        <span>Next.js 14</span><span>TypeScript</span><span>Tailwind</span><span>Vercel</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://erowan.vercel.app" target="_blank" rel="noopener" class="project-link">Live Site &rarr;</a>
+                        <a href="https://github.com/pandejesal/erowan" target="_blank" rel="noopener" class="project-link project-link-secondary">View Repository &rarr;</a>
+                    </div>
                 </div>
             </div>
 
@@ -66,18 +98,24 @@
                 <!-- WSB Alpha System -->
                 <div class="project-card" data-repo="pandejesal/WSB-Alpha-System">
                     <div class="project-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-                        <span class="card-tag">[Quant & NLP Pipeline]</span>
+                        <span class="card-tag">[Agentic Quant System · Paper Trading]</span>
                         <div class="repo-stats-badge" data-repo="pandejesal/WSB-Alpha-System"></div>
                     </div>
-                    <h3 class="project-title">WSB Alpha System</h3>
-                    <p class="project-desc" style="margin-bottom: 0.5rem;">An end-to-end Python research pipeline isolating financial alpha from Reddit "Due Diligence" posts using FinBERT and Oxford growth normalization.</p>
+                    <h3 class="project-title">WSB Alpha System <span class="live-badge" title="Paper trading weekdays 3:55 PM ET, live trading disabled by default"><span class="live-dot"></span>Paper Live</span></h3>
+                    <p class="project-desc" style="margin-bottom: 0.5rem;">Autonomous, agentic quant trading system — retail sentiment → statistically-hardened strategies → paper execution, running entirely on GitHub's free tier (Actions + Pages). ~130 Python modules, 15 strategy specs, 14 pipelines.</p>
                     <ul class="card-list">
-                        <li><strong>Ticker Collision Resolution:</strong> Custom Regex + Financial Blacklist resolves ambiguities.</li>
-                        <li><strong>FinBERT NLP:</strong> Deep learning sentiment probabilities to maintain high signal purity.</li>
-                        <li><strong>Oxford Normalization:</strong> Divides daily ticker mentions by total DD post volume.</li>
-                        <li><strong>T+1 Execution:</strong> Forces trade entry strictly at T+1 market close.</li>
+                        <li><strong>4-Tier OHLCV Chain:</strong> Alpaca → Tiingo → Binance Public → yfinance with DuckDB cache; FRED macro regimes.</li>
+                        <li><strong>Lookahead-Free T+1:</strong> Decisions on T-1 close, fills at T open — asserted in tests.</li>
+                        <li><strong>Statistical Gates:</strong> Permutation, walk-forward, deflated Sharpe; DERM-style evolution promotes on OOS evidence only.</li>
+                        <li><strong>Fail-Closed Ops:</strong> Missing creds, stale data, or API failure halts orders — never silent mocks. <code>LIVE_TRADING_ENABLED=False</code>.</li>
                     </ul>
-                    <a href="https://github.com/pandejesal/WSB-Alpha-System" target="_blank" class="project-link">View Repository &rarr;</a>
+                    <div class="tech-pills" aria-label="WSB Alpha tech stack">
+                        <span>Python 3.12</span><span>Alpaca / CCXT</span><span>GitHub Actions</span><span>DuckDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://pandejesal.github.io/WSB-Alpha-System/" target="_blank" rel="noopener" class="project-link">Live Dashboard &rarr;</a>
+                        <a href="https://github.com/pandejesal/WSB-Alpha-System" target="_blank" rel="noopener" class="project-link project-link-secondary">View Repository &rarr;</a>
+                    </div>
                 </div>
 
                 <!-- Robotic Arm -->
@@ -97,34 +135,43 @@
                 <!-- Resonance Engine -->
                 <div class="project-card" data-repo="pandejesal/resonance">
                     <div class="project-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-                        <span class="card-tag">[Music Archival]</span>
+                        <span class="card-tag">[Self-Hosted Audio · Rust + React]</span>
                         <div class="repo-stats-badge" data-repo="pandejesal/resonance"></div>
                     </div>
                     <h3 class="project-title">Resonance</h3>
-                    <p class="project-desc" style="margin-bottom: 0.5rem;">Premium self-hosted music archival system prioritizing speed and audio quality with bit-perfect playback, built with Rust and React.</p>
-                    <a href="https://github.com/pandejesal/resonance" target="_blank" class="project-link">View Repository &rarr;</a>
+                    <p class="project-desc" style="margin-bottom: 0.5rem;">Premium self-hosted music archival for 500k+ tracks — bit-perfect playback, gapless + crossfade, ReplayGain, instant FTS5 search, Subsonic/OpenSubsonic API, PWA offline, and a native Android shell (Rust via JNI).</p>
+                    <div class="tech-pills" aria-label="Resonance tech stack">
+                        <span>Rust</span><span>React 18 + TS</span><span>SQLite</span><span>Subsonic API</span>
+                    </div>
+                    <a href="https://github.com/pandejesal/resonance" target="_blank" rel="noopener" class="project-link">View Repository &rarr;</a>
                 </div>
 
                 <!-- Binance CLI -->
                 <div class="project-card" data-repo="pandejesal/Binance-Futures-Trading-Bot">
                     <div class="project-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-                        <span class="card-tag">[API Client]</span>
+                        <span class="card-tag">[Derivatives · REST API Client]</span>
                         <div class="repo-stats-badge" data-repo="pandejesal/Binance-Futures-Trading-Bot"></div>
                     </div>
                     <h3 class="project-title">Binance Futures Trading Bot</h3>
-                    <p class="project-desc" style="margin-bottom: 0.5rem;">A production-grade command-line trading application for placing orders on Binance Futures Testnet, featuring direct HTTP REST API integration and a full-stack web UI controller.</p>
-                    <a href="https://github.com/pandejesal/Binance-Futures-Trading-Bot" target="_blank" class="project-link">View Repository &rarr;</a>
+                    <p class="project-desc" style="margin-bottom: 0.5rem;">Production-grade CLI for Binance Futures Testnet (USDT-M) — market, limit &amp; stop-market orders with zero wrapper dependencies. Direct HMAC-SHA256 REST signing, clock-drift correction, secret-redacting logs, plus a local web UI controller.</p>
+                    <div class="tech-pills" aria-label="Binance bot tech stack">
+                        <span>Python</span><span>REST + HMAC</span><span>React Dashboard</span>
+                    </div>
+                    <a href="https://github.com/pandejesal/Binance-Futures-Trading-Bot" target="_blank" rel="noopener" class="project-link">View Repository &rarr;</a>
                 </div>
 
                 <!-- SafeSponsor AI -->
                 <div class="project-card" data-repo="pandejesal/SafeSponsor-AI">
                     <div class="project-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-                        <span class="card-tag">[AI & TypeScript]</span>
+                        <span class="card-tag">[Brand Safety AI · Next.js 15]</span>
                         <div class="repo-stats-badge" data-repo="pandejesal/SafeSponsor-AI"></div>
                     </div>
                     <h3 class="project-title">SafeSponsor-AI</h3>
-                    <p class="project-desc" style="margin-bottom: 0.5rem;">A Brand Safety Influencer Vetting Tool for E-Commerce Brands.</p>
-                    <a href="https://github.com/pandejesal/SafeSponsor-AI" target="_blank" class="project-link">View Repository &rarr;</a>
+                    <p class="project-desc" style="margin-bottom: 0.5rem;">Turns a creator handle or video URL into an executive risk dossier: grounded web research, YouTube transcript parsing, 50-comment toxicity audit, competitor-conflict checks, and a 0–100 brand-safety score with contract safeguards. Gemini with Groq fallback; Firebase Auth + Dodo Payments.</p>
+                    <div class="tech-pills" aria-label="SafeSponsor tech stack">
+                        <span>Next.js 15</span><span>Gemini + Groq</span><span>Firebase</span>
+                    </div>
+                    <a href="https://github.com/pandejesal/SafeSponsor-AI" target="_blank" rel="noopener" class="project-link">View Repository &rarr;</a>
                 </div>
                 
                 <!-- Project-Rainfall -->
@@ -135,20 +182,26 @@
                     </div>
                     <h3 class="project-title">Project-Rainfall</h3>
                     <p class="project-desc" style="margin-bottom: 0.5rem;">An AI-powered intelligent web application that eliminates language barriers and automates FIR data extraction.</p>
-                    <a href="https://github.com/pandejesal/project-rainfall" target="_blank" class="project-link">View Repository &rarr;</a>
+                    <a href="https://github.com/pandejesal/project-rainfall" target="_blank" rel="noopener" class="project-link">View Repository &rarr;</a>
                 </div>
 
                 <!-- LinkedIn Post CLI -->
                 <div class="project-card" data-repo="pandejesal/LinkedIn-Post-CLI">
                     <div class="project-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-                        <span class="card-tag">[CLI & Automation]</span>
+                        <span class="card-tag">[CLI & Automation · Free AI Ghostwriter]</span>
                         <div class="repo-stats-badge" data-repo="pandejesal/LinkedIn-Post-CLI"></div>
                     </div>
                     <h3 class="project-title">LinkedIn Post CLI</h3>
-                    <p class="project-desc" style="margin-bottom: 0.5rem;">A lightweight command-line application for drafting, scheduling, and publishing posts to LinkedIn directly from the terminal.</p>
-                    <a href="https://github.com/pandejesal/LinkedIn-Post-CLI" target="_blank" class="project-link">View Repository &rarr;</a>
+                    <p class="project-desc" style="margin-bottom: 0.5rem;">Post to LinkedIn from the terminal — direct text mode or free Gemini ghostwriter mode that drafts from a prompt, asks for confirmation, then publishes via OAuth (<code>w_member_social</code>).</p>
+                    <div class="tech-pills" aria-label="LinkedIn CLI tech stack">
+                        <span>Python</span><span>LinkedIn API</span><span>Gemini</span>
+                    </div>
+                    <a href="https://github.com/pandejesal/LinkedIn-Post-CLI" target="_blank" rel="noopener" class="project-link">View Repository &rarr;</a>
                 </div>
+
             </div>
+
+            <p class="more-repos">More on GitHub: <a href="https://github.com/pandejesal/University-Eng-Interview-Simulator" target="_blank" rel="noopener">Eng Interview Simulator</a> · <a href="https://github.com/pandejesal/safesponsor-content-engine" target="_blank" rel="noopener">SafeSponsor Content Engine</a></p>
 
             <!-- GitHub Activity & Contribution Section -->
             <section id="github-activity-section" class="github-activity-section" style="margin-top: 2.5rem;">
@@ -157,7 +210,7 @@
                         <div class="status-badge"><span class="dot"></span> Dynamic GitHub API</div>
                         <h1 style="font-weight: 700; letter-spacing: -0.5px;">Contribution Activity</h1>
                     </div>
-                    <a href="https://github.com/pandejesal" target="_blank" class="action-btn" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">
+                    <a href="https://github.com/pandejesal" target="_blank" rel="noopener" class="action-btn" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">
                         @pandejesal on GitHub &rarr;
                     </a>
                 </header>
@@ -260,27 +313,34 @@
                     <h4 class="widget-title" style="margin-bottom: 0.25rem; font-size: 0.75rem; color: var(--subtext0);">Currently Based In 📍</h4>
                     <p style="font-weight: 500; color: var(--text); font-size: 0.95rem;">Ahmedabad, India</p>
                 </div>
-                <div id="location-map" style="height: 140px; width: 100%; background-color: var(--bg-base); border-top: 1px solid var(--surface0); z-index: 1; margin-top: auto;"></div>
+                <div id="location-map" role="img" aria-label="Map showing Ahmedabad, India" style="height: 140px; width: 100%; background-color: var(--bg-base); border-top: 1px solid var(--surface0); z-index: 0; margin-top: auto;"><noscript><a href="https://www.openstreetmap.org/?mlat=23.0225&amp;mlon=72.5714#map=11/23.0225/72.5714" target="_blank" rel="noopener" style="display:block;padding:1rem;font-size:.8rem;">View Ahmedabad on OpenStreetMap</a></noscript></div>
+                <p id="location-map-fallback" class="map-fallback" hidden>Map unavailable — <a href="https://www.openstreetmap.org/?mlat=23.0225&amp;mlon=72.5714#map=11/23.0225/72.5714" target="_blank" rel="noopener">view Ahmedabad on OpenStreetMap</a></p>
             </div>
 
              <div class="sidebar-widget">
                 <h4 class="widget-title">Connect</h4>
                 <div class="connect-links">
-                    <a href="https://github.com/pandejesal" target="_blank" class="action-btn">GitHub</a>
-                    <a href="https://www.linkedin.com/in/jesal-pande" target="_blank" class="action-btn">LinkedIn</a>
+                    <a href="https://github.com/pandejesal" target="_blank" rel="noopener" class="action-btn">GitHub</a>
+                    <a href="https://www.linkedin.com/in/jesal-pande" target="_blank" rel="noopener" class="action-btn">LinkedIn</a>
+                    <a href="https://erowan.vercel.app" target="_blank" rel="noopener" class="action-btn">Erowan — Live Site</a>
                     <div class="contact-details">
-                        <span class="contact-detail">pandejesal@gmail.com</span>
-                        <span class="contact-detail">+91 9106515036</span>
+                        <a class="contact-detail contact-link" href="mailto:pandejesal@gmail.com">pandejesal@gmail.com</a>
+                        <a class="contact-detail contact-link" href="tel:+919106515036">+91 9106515036</a>
                     </div>
                 </div>
             </div>
         </aside>
     </div>
+
+    <footer class="site-footer">
+        <p>© <span id="current-year">2026</span> Jesal Pande · Ahmedabad → Canada · <a href="https://github.com/pandejesal/Portfolio" target="_blank" rel="noopener">Source</a></p>
+        <p class="footer-note">Contribution graph shows public GitHub activity only. Paper-trading projects are research — not financial advice.</p>
+    </footer>
     
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">
         &uarr; Top
     </button>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

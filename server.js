@@ -6,9 +6,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.use(express.static(__dirname));
+// Basic hardening headers for a static portfolio
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  next();
+});
+
+app.use(express.static(__dirname, { maxAge: '1h', extensions: ['html'] }));
 
 // Fallback for any unknown routes
 app.use((req, res) => {
